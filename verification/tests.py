@@ -11,26 +11,40 @@ Each test is dict with
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": ["sims", "s"],
+            "answer": 3
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
+            "input": ["find the river", "e"],
+            "answer": 12
+        },
+        {
+            "input": ["hi", " "],
+            "answer": None,
+            "explanation": "No space in the given line."
+        },
+        {
+            "input": ["hi mayor", " "],
+            "answer": None,
+            "explanation": "Only one space in a give line, we looking for the second one"
+        },
+        {
+            "input": ["hi mr Mayor", " "],
+            "answer": 5
         }
     ],
     "Extra": [
         {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
+            "input": ["hi", "i"],
+            "answer": None,
         },
         {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
+            "input": ["abc", "d"],
+            "answer": None
+        },
+        {
+            "input": ["see you", "e"],
+            "answer": 2
         }
     ]
 }

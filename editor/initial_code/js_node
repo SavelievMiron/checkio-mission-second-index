@@ -1,7 +1,7 @@
 "use strict";
 
-function sumTwo(a, b) {
-    // sums two passed arguments
+function secondIndex(a, b) {
+    // returns the second index of symbol in a given text
 
     // your code here
     return 0;
@@ -10,7 +10,12 @@ function sumTwo(a, b) {
 var assert = require('assert');
 
 if (!global.is_checking) {
-    assert.equal(sumTwo(3, 2), 5, "First")
-    assert.equal(sumTwo(5, 7), 12, "Second")
-    console.log("Coding complete? Click 'Check' to review your tests and earn cool rewards!");
+    console.log('Example')
+    console.log(secondIndex("sims", "s"))
+    assert.equal(secondIndex("sims", "s"), 3, "First")
+    assert.equal(secondIndex("find the river", "e"), 12, "Second")
+    assert.equal(secondIndex("hi", " "), undefined, "Third")
+    assert.equal(secondIndex("hi mayor", " "), undefined, "Fourth")
+    assert.equal(secondIndex("hi mr Mayor", " "), 5, "Fifth")
+    console.log("You are awesome! All tests are done! Go Check it!");
 }

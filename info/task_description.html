@@ -1,49 +1,33 @@
+
 <p>
-    <i>( Describe task in general )</i>
+    <i>English Descriptin is not ready yet. Please choose Russian Translation if it helps</i>
 </p>
 
 <p>
-    Sum two passed ints
-</p>
-
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <strong>Input: </strong> Two strings. 
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> Int or {% if interpreter.slug == "js-node" %}undefined{% else %}None{% endif %}
 </p>
 
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
 
 {% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">sumTwo(2, 3) == 5
-sumTwo(5, 7) == 12
+<pre class="brush: javascript">secondIndex("sims", "s") == 3
+secondIndex("find the river", "e") == 12
+secondIndex("hi", " ") is None
 </pre>
 {% else %}
-<pre class="brush: python">sum_two(2, 3) == 5
-sum_two(5, 7) == 12
+<pre class="brush: python">second_index("sims", "s") == 3
+second_index("find the river", "e") == 12
+second_index("hi", " ") is None
 </pre>
 {% endif %}
 </div>
 
-<p class="for_info_only">
-    <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
-</p>
-
-<p>
-    <strong>Precondition:</strong>
-    <i>Constraints for Input</i>
-</p>
