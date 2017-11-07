@@ -6,9 +6,10 @@ def second_index(text: str, symbol: str):
     return 0
 
 if __name__ == '__main__':
-    #These "asserts" using only for self-checking and not necessary for auto-testing
     print('Example:')
     print(second_index("sims", "s"))
+
+    #These "asserts" using for self-checking and not for auto-testing
     assert second_index("sims", "s") == 3, "First"
     assert second_index("find the river", "e") == 12, "Second"
     assert second_index("hi", " ") is None, "Third"
