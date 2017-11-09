@@ -1,7 +1,7 @@
 "use strict";
 
 function secondIndex(a, b) {
-    // returns the second index of symbol in a given text
+    // returns the second index of a symbol in a given text
 
     // your code here
     return 0;
@@ -12,6 +12,8 @@ var assert = require('assert');
 if (!global.is_checking) {
     console.log('Example')
     console.log(secondIndex("sims", "s"))
+
+    // These "asserts" are used for self-checking and not for an auto-testing
     assert.equal(secondIndex("sims", "s"), 3, "First")
     assert.equal(secondIndex("find the river", "e"), 12, "Second")
     assert.equal(secondIndex("hi", " "), undefined, "Third")
