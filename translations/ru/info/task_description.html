@@ -4,7 +4,7 @@
 </p>
 
 <p>
-	Разберем самый первый пример, когда необходимо найти второе вхождение "s" в слове "sims". Если бы нам надо было найти ее первое вхождение, то тут все просто с помощью функции <a href="https://docs.python.org/3/library/stdtypes.html#str.index">index</a> или <a href="https://docs.python.org/3/library/stdtypes.html#str.find">find</a> мы можем узнать, что "s" это самый первый символ в слове "sims" а значит индек первого вхождения 0. Но нам необходимо найти вторую "s", а она 4ая по счету, значит индекс второго входжения (и ответ за вопрс) 3.
+	Разберем самый первый пример, когда необходимо найти второе вхождение "s" в слове "sims". Если бы нам надо было найти ее первое вхождение, то тут все просто с помощью функции <a href="https://docs.python.org/3/library/stdtypes.html#str.index">index</a> или <a href="https://docs.python.org/3/library/stdtypes.html#str.find">find</a> мы можем узнать, что "s" это самый первый символ в слове "sims" а значит индек первого вхождения 0. Но нам необходимо найти вторую "s", а она 4ая по счету, значит индекс второго входжения (и ответ за вопрс) 2.
 </p>
 
 <p>
@@ -23,12 +23,12 @@
     </p>
 
 {% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">secondIndex("sims", "s") == 3
+<pre class="brush: javascript">secondIndex("sims", "s") == 2
 secondIndex("find the river", "e") == 12
 secondIndex("hi", " ") is None
 </pre>
 {% else %}
-<pre class="brush: python">second_index("sims", "s") == 3
+<pre class="brush: python">second_index("sims", "s") == 2
 second_index("find the river", "e") == 12
 second_index("hi", " ") is None
 </pre>
