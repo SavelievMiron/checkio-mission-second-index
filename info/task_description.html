@@ -4,7 +4,18 @@
 </p>
 
 <p>
-	Let's go through the first example where you need to find the second occurrence of "s" in a word "sims". It’s easy to find its first occurrence with a function <a href="https://docs.python.org/3/library/stdtypes.html#str.index">index</a> or <a href="https://docs.python.org/3/library/stdtypes.html#str.find">find</a> which will point out that "s" is the first symbol in a word "sims" and therefore the index of the first occurrence is 0. But we have to find the second "s" which is 4th in a row and that means that the index of the second occurrence (and the answer to a question) is 3. 
+	Let's go through the first example where you need to find the second occurrence of "s" in a word "sims". It’s easy to find its first occurrence with a function 
+{% if interpreter.slug == "js-node" %}
+
+	<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf</a>
+
+{% else %}
+
+	<a href="https://docs.python.org/3/library/stdtypes.html#str.index">index</a> or <a href="https://docs.python.org/3/library/stdtypes.html#str.find">find</a> 
+
+{% endif %}
+
+	which will point out that "s" is the first symbol in a word "sims" and therefore the index of the first occurrence is 0. But we have to find the second "s" which is 4th in a row and that means that the index of the second occurrence (and the answer to a question) is 3. 
 </p>
 
 <p>
