@@ -1,0 +1,104 @@
+<body data-author="likewind">
+
+<div class="question-answer">
+    <div class="question">
+        Совершенно не представляю как решать эту задачу.
+    </div>
+    <div class="answer">
+        Вы можете найти первое вхождение искомого символа в строку, затем сдвинуться на 1 символ дальше по строке
+        и еще раз найти такой же символ. Это и будет второе вхождение в строку.
+    </div>
+</div>    
+
+<div class="question-answer">
+    <div class="question">
+        С чего мне начать?
+    </div>
+    <div class="answer">
+        Прежде всего необходимо убедиться, что в строке действительно есть искомый символ как минимум дважды.
+        Если это не так - программа должна вернуть None.
+        Вам поможет метод <a href='https://docs.python.org/3/library/stdtypes.html?highlight=count#str.count'>str.count</a>.
+    </div>
+</div>    
+    
+<div class="question-answer">
+    <div class="question">
+        Как должен выглядеть код и как он работает?
+    </div>
+    <div class="answer">
+        Первая часть программы может выглядеть так:
+        <pre class="brush: python">
+        def second_index(text, symbol):
+            if text.count(symbol) < 2: 
+                return None</pre>
+        Например, если у нас есть строка 'some text' и мы проверяем букву 'e', то программа не вернет None. Но если в качестве
+        аргумента symbol мы подставим, например, букву 's', то программа вернет None, так как 'some text'.count('s') == 1 и
+        выполняется условие 1 < 2.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Что дальше?
+    </div>
+    <div class="answer">
+        Теперь, когда вы убедились, что искомых символов в строке действительно как минимум 2, пришло время найти 
+        позицию первого вхождения. В этом вам поможет метод 
+        <a href='https://docs.python.org/3/library/stdtypes.html?highlight=find#str.find'>find</a>.
+        Он возвращает индекс первого найденного вхождения символа в строку. Например:<br>
+        <pre class="brush: python">
+        text = 'abcdec'
+        symbol = 'c'
+        first = text.find(symbol, 0)</pre>
+        Обратите внимание, что в скобках указывать 0 не обязательно. Это лишь показывает, с какой позиции функция
+        начинает искать symbol (0 - значит с самого начала строки). 
+        В этом случае 'first' будет равен 2, так как символ 'c' находится на позиции с индексом 2.
+    </div>
+</div>    
+
+<div class="question-answer">
+    <div class="question">
+        А в коде это будет выглядеть, как...
+    </div>
+    <div class="answer">
+        Примерно таким образом:
+        <pre class="brush: python">
+        def second_index(text, symbol):
+            if text.count(symbol) < 2: 
+                return None
+            first = text.find(symbol)</pre>
+        Таким образом, если в нашем исходном тексте будет менее 2 раз встречаться искомый элемент, функция вернет None. Если
+        2 и более раз - функция найдет первое вхождение символа в строку.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Но нам нужно второе вхождение, не так ли?
+    </div>
+    <div class="answer">
+        Совершенно верно. Поэтому в этом случае мы начнем поиск не с самого начала строки, а с символа, следующего за 
+        позицией, которую мы нашли как 'first'. Для этого достаточно изменить стартовую позицию поиска с 0 на first+1.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Мне нужно еще немного помощи!
+    </div>
+    <div class="answer">
+        Окончательная версия программы будет выглядеть так:
+        <pre class="brush: python">
+        def second_index(text, symbol):
+            if text.count(symbol) < 2: 
+                return None
+            first = text.find(symbol)
+            return text.find(symbol, first + 1)</pre>
+        Если мы попытаемся найти символ 'a' в предложении "I'm learning Python and nothing else" с помощью этой функции,
+        то получим 20, так как сперва определим, что первый раз символ 'a' находится на позиции с индексом 6 (first = 6),
+        а затем, начав искать со следующего символа (first + 1), определим, что следующий символ 'a' находится
+        на позиции с индексом 20.
+    </div>
+</div>
+        
+</body>
