@@ -28,9 +28,9 @@
     <div class="answer">
         Первая часть программы может выглядеть так:
         <pre class="brush: python">
-        def second_index(text, symbol):
-            if text.count(symbol) < 2: 
-                return None</pre>
+def second_index(text, symbol):
+    if text.count(symbol) < 2: 
+        return None</pre>
         Например, если у нас есть строка 'some text' и мы проверяем букву 'e', то программа не вернет None. Но если в качестве
         аргумента symbol мы подставим, например, букву 's', то программа вернет None, так как 'some text'.count('s') == 1 и
         выполняется условие 1 < 2.
@@ -47,9 +47,9 @@
         <a href='https://docs.python.org/3/library/stdtypes.html?highlight=find#str.find'>find</a>.
         Он возвращает индекс первого найденного вхождения символа в строку. Например:<br>
         <pre class="brush: python">
-        text = 'abcdec'
-        symbol = 'c'
-        first = text.find(symbol, 0)</pre>
+text = 'abcdec'
+symbol = 'c'
+first = text.find(symbol, 0)</pre>
         Обратите внимание, что в скобках указывать 0 не обязательно. Это лишь показывает, с какой позиции функция
         начинает искать symbol (0 - значит с самого начала строки). 
         В этом случае 'first' будет равен 2, так как символ 'c' находится на позиции с индексом 2.
@@ -63,10 +63,10 @@
     <div class="answer">
         Примерно таким образом:
         <pre class="brush: python">
-        def second_index(text, symbol):
-            if text.count(symbol) < 2: 
-                return None
-            first = text.find(symbol)</pre>
+def second_index(text, symbol):
+    if text.count(symbol) < 2: 
+        return None
+    first = text.find(symbol)</pre>
         Таким образом, если в нашем исходном тексте будет менее 2 раз встречаться искомый элемент, функция вернет None. Если
         2 и более раз - функция найдет первое вхождение символа в строку.
     </div>
@@ -89,11 +89,11 @@
     <div class="answer">
         Окончательная версия программы будет выглядеть так:
         <pre class="brush: python">
-        def second_index(text, symbol):
-            if text.count(symbol) < 2: 
-                return None
-            first = text.find(symbol)
-            return text.find(symbol, first + 1)</pre>
+def second_index(text, symbol):
+    if text.count(symbol) < 2: 
+        return None
+    first = text.find(symbol)
+    return text.find(symbol, first + 1)</pre>
         Если мы попытаемся найти символ 'a' в предложении "I'm learning Python and nothing else" с помощью этой функции,
         то получим 20, так как сперва определим, что первый раз символ 'a' находится на позиции с индексом 6 (first = 6),
         а затем, начав искать со следующего символа (first + 1), определим, что следующий символ 'a' находится
