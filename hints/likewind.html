@@ -28,9 +28,9 @@
     <div class="answer">
         The first part of the program might look like this:
         <pre class="brush: python">
-        def second_index(text, symbol):
-            if text.count(symbol) < 2: 
-                return None</pre>
+def second_index(text, symbol):
+    if text.count(symbol) < 2: 
+        return None</pre>
         For example, if we have a string 'some text' and we are checking the letter 'e', then the program won't return None. But if we substitute
         the letter 's' for the symbol argument, then the program will return None, since 'some text'.count ('s') == 1 
         and the condition 1 < 2 is met.
@@ -47,9 +47,9 @@
         will help you with that.
         It returns the index of the first character occurrence found in the string. For example:<br>
         <pre class="brush: python">
-        text = 'abcdec'
-        symbol = 'c'
-        first = text.find(symbol, 0)</pre>
+text = 'abcdec'
+symbol = 'c'
+first = text.find(symbol, 0)</pre>
         Please note, that 0 is optional in parentheses. This only shows where the function
         starts looking for symbol (0 means that it starts from the very beginning of the string). 
         In this case, the 'first' will equal 2, since the character 'c' is in the position with the index 2.
@@ -63,10 +63,10 @@
     <div class="answer">
         Something like this:
         <pre class="brush: python">
-        def second_index(text, symbol):
-            if text.count(symbol) < 2: 
-                return None
-            first = text.find(symbol)</pre>
+def second_index(text, symbol):
+    if text.count(symbol) < 2: 
+        return None
+    first = text.find(symbol)</pre>
         Thus, if in our input text the required element occurs less than 2 times, the function will return None.
         If it occurs 2 or more times - the function will find the first occurrence of the character in a string.
     </div>
@@ -89,11 +89,11 @@
     <div class="answer">
         The final version of the program will look like this:
         <pre class="brush: python">
-        def second_index(text, symbol):
-            if text.count(symbol) < 2: 
-                return None
-            first = text.find(symbol)
-            return text.find(symbol, first + 1)</pre>
+def second_index(text, symbol):
+    if text.count(symbol) < 2: 
+        return None
+    first = text.find(symbol)
+    return text.find(symbol, first + 1)</pre>
         If we try to find the character 'a' in the sentence "I'm learning Python and nothing else" by using this function,
         we'll get 20. Because at first we will determine that the character 'a' occurs the first time in the position with the index 6 (first = 6),
         and then, when we start looking from the next character (first + 1), we'll determine that the next character 'a' occurs 
